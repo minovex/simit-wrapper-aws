@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Simit.Wrapper.AWS</id>
+    <version>1.0.0</version>
+    <authors>Mustafa Ozan Vural</authors>
+    <owners>Minovex</owners>
+	<projectUrl>https://github.com/minovex/simit-wrapper-aws</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simit Wrapper AWS Library</description>
+    <tags>Simit Wrapper AWS</tags>
+    <dependencies>
+      <dependency id="AWSSDK" version="2.3.38" />
+    </dependencies>
+  </metadata>
+</package>
