@@ -14,7 +14,7 @@
     {
         #region Public Methods
 
-        public void PutObject(string bucketName, string key, string fileName, Stream file)
+        public void PutObject(string bucketName, string key, string fileName, Stream file, RegionEndpoint endpoint)
         {
             if (bucketName == null) throw new ArgumentNullException("bucketName");
             if (key == null) throw new ArgumentNullException("key");
@@ -24,7 +24,7 @@
             string clientAccessKey = System.Configuration.ConfigurationManager.AppSettings["aws:s3:accesskey"];
             string clientSecretKey = System.Configuration.ConfigurationManager.AppSettings["aws:s3:secretkey"];
 
-            TransferUtility utility = new TransferUtility(clientAccessKey, clientSecretKey, RegionEndpoint.EUWest1);
+            TransferUtility utility = new TransferUtility(clientAccessKey, clientSecretKey, endpoint);
 
             utility.Upload(new TransferUtilityUploadRequest
             {
